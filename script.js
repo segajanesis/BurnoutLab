@@ -16,9 +16,9 @@ document.getElementById('newsletterForm').addEventListener('submit', async (e) =
 
   const formData = new FormData();
   formData.append('email', email);
-  formData.append('publication_id', 'your_id');
+  formData.append('publication_id', 'e5646998-f7ef-44ab-8b37-09c737ddcb01');
 
-  await fetch('https://api.beehiiv.com/v1/publications/your_id/subscribe', {
+  await fetch('https://api.beehiiv.com/v1/publications/e5646998-f7ef-44ab-8b37-09c737ddcb01/subscribe', {
     method: 'POST',
     body: formData,
     mode: 'no-cors'
