@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  padding: 2em;
+  background: #f9f9f9;
+}
+.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+.blurred-overlay {
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1em;
+  border-left: 4px solid #111;
+  margin-top: 2em;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}

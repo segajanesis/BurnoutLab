@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>burnout lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>burnout lab</h1>
+  <div id="burnout-report" class="blurred">
+    <p>This will become your full resume report.</p>
+  </div>
+  <div id="blurOverlay" class="blurred-overlay">
+    <p><strong>full report for free newsletter subscribers</strong></p>
+    <p>join the newsletter to reveal full role matches, certifications, and interview prep.</p>
+    <button onclick="openUnlockModal()">unlock full report</button>
+  </div>
+
+  <div id="unlockModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>full report for free newsletter subscribers</h2>
+      <p>unlock your score breakdown, full role list, certifications, and interview prep.</p>
+      <p style="font-size:0.9em;">newsletter is sent once a week. it has strategies and free tools that make job searching suck less. you can unsubscribe at any time.</p>
+      <form id="newsletterForm">
+        <input type="email" id="userEmail" name="email" placeholder="you@example.com" required />
+        <input type="text" id="trap" name="trap" style="display:none;" />
+        <div style="margin-top:1em;">
+          <label>
+            <input type="checkbox" id="sendToEmail" />
+            send a copy of my report to my email <span style="font-size:0.85em;">(we don’t store or save your results)</span>
+          </label>
+        </div>
+        <button type="submit">unlock my report</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
