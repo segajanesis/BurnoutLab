@@ -10,7 +10,7 @@
   <p>paste your resume and get a diagnostic report</p>
 
   <textarea id="resumeTextarea" placeholder="paste your resume here..."></textarea>
-  <button onclick="generateLabReport()">analyze resume</button>
+  <button onclick="generateLabReport()">analyze my resume and save me from this hell</button>
 
   <div id="burnout-report" class="blurred">
     <p>your burnout lab report will appear here...</p>
@@ -18,7 +18,7 @@
 
   <div id="blurOverlay" class="blurred-overlay">
     <p><strong>full report for free newsletter subscribers</strong></p>
-    <button onclick="openUnlockModal()">unlock full report</button>
+    <button onclick="openUnlockModal()">view your full report</button>
   </div>
 
   <div id="unlockModal" class="modal" style="display:none;">
@@ -26,12 +26,12 @@
       <h2>full report for free newsletter subscribers</h2>
       <p>newsletter is sent once a week. unsubscribe anytime.</p>
       <form id="newsletterForm">
-        <input type="email" id="userEmail" name="email" placeholder="you@example.com" required />
+        <input type="email" id="userEmail" name="email" placeholder="verycoolemail@example.com" required />
         <input type="text" id="trap" name="trap" style="display:none;" />
         <div style="margin-top:1em;">
           <label>
-            <input type="checkbox" id="sendToEmail" />
-            send a copy of this report to my email (we don’t save anything)
+            <input type="checkbox" id="downloadPDF" />
+            download a PDF copy of this report
           </label>
         </div>
         <button type="submit">unlock my report</button>
