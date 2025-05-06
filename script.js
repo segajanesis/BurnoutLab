@@ -5,7 +5,7 @@ function openUnlockModal() {
 document.getElementById('newsletterForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const email = document.getElementById('userEmail').value.trim();
-  const sendToEmail = document.getElementById('sendToEmail').checked;
+  const downloadPDF = document.getElementById('downloadPDF').checked;
   const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const botTrap = document.getElementById('trap');
 
@@ -24,7 +24,7 @@ document.getElementById('newsletterForm').addEventListener('submit', async (e) =
     mode: 'no-cors'
   });
 
-  if (sendToEmail) {
+  if (downloadPDF) {
     const element = document.getElementById('burnout-report');
     const options = {
       margin: 0.5,
