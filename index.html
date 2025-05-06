@@ -12,6 +12,13 @@
   <textarea id="resumeTextarea" placeholder="paste your resume here..."></textarea>
   <button onclick="generateLabReport()">analyze my resume</button>
 
+  <!-- 🔓 TEMPORARY UNLOCK: showing report directly -->
+  <div id="burnout-report">
+    <p>your burnout lab report will appear here...</p>
+  </div>
+
+  <!-- 🔒 TEMPORARILY DISABLED: blur overlay -->
+  <!--
   <div id="burnout-report" class="blurred">
     <p>your burnout lab report will appear here...</p>
   </div>
@@ -20,7 +27,10 @@
     <p><strong>full report for free newsletter subscribers</strong></p>
     <button onclick="openUnlockModal()">view your full report</button>
   </div>
+  -->
 
+  <!-- 🔒 TEMPORARILY DISABLED: unlock modal and form -->
+  <!--
   <div id="unlockModal" class="modal" style="display:none;">
     <div class="modal-content">
       <h2>full report for free newsletter subscribers</h2>
@@ -38,6 +48,7 @@
       </form>
     </div>
   </div>
+  -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="script.js"></script>
