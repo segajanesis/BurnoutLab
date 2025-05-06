@@ -3,6 +3,11 @@ body {
   padding: 2em;
   background: #f9f9f9;
 }
+textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1em;
+}
 .blurred {
   filter: blur(6px);
   pointer-events: none;
@@ -10,11 +15,9 @@ body {
 }
 .blurred-overlay {
   background: rgba(255,255,255,0.8);
-  text-align: center;
-  padding: 1.5em;
-  font-size: 1em;
-  border-left: 4px solid #111;
-  margin-top: 2em;
+  padding: 1em;
+  border-left: 4px solid #222;
+  margin: 2em 0;
 }
 .modal {
   position: fixed;
