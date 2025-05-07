@@ -1,4 +1,4 @@
-// 🔒 TEMPORARILY DISABLED: newsletter unlock modal logic
+// TEMPORARILY DISABLED: newsletter unlock modal logic
 /*
 function openUnlockModal() {
   document.getElementById('unlockModal').style.display = 'flex';
@@ -44,7 +44,7 @@ document.getElementById('newsletterForm').addEventListener('submit', async (e) =
 });
 */
 
-// ✅ ACTIVE: resume analysis
+// ACTIVE: resume analysis
 async function generateLabReport() {
   const resume = document.getElementById('resumeTextarea').value;
   if (!resume || resume.length < 100) {
