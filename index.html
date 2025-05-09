@@ -7,50 +7,17 @@
 </head>
 <body>
   <h1>burnout lab</h1>
+  <h2>tools that make job searching suck less</h2>
   <p>paste your resume and get a diagnostic report</p>
 
-  <textarea id="resumeTextarea" placeholder="paste your resume here..."></textarea>
+  <textarea id="resumeTextarea" placeholder="paste your resume here"></textarea>
   <button onclick="generateLabReport()">analyze my resume</button>
 
-  <!-- 🔓 TEMPORARY UNLOCK: showing report directly -->
+
   <div id="burnout-report">
-    <p>your burnout lab report will appear here...</p>
+    <p>burnout lab results appear here</p>
   </div>
-
-  <!-- 🔒 TEMPORARILY DISABLED: blur overlay -->
-  <!--
-  <div id="burnout-report" class="blurred">
-    <p>your burnout lab report will appear here...</p>
-  </div>
-
-  <div id="blurOverlay" class="blurred-overlay">
-    <p><strong>full report for free newsletter subscribers</strong></p>
-    <button onclick="openUnlockModal()">view your full report</button>
-  </div>
-  -->
-
-  <!-- 🔒 TEMPORARILY DISABLED: unlock modal and form -->
-  <!--
-  <div id="unlockModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <h2>full report for free newsletter subscribers</h2>
-      <p>newsletter is sent once a week. unsubscribe anytime.</p>
-      <form id="newsletterForm">
-        <input type="email" id="userEmail" name="email" placeholder="me@example.com" required />
-        <input type="text" id="trap" name="trap" style="display:none;" />
-        <div style="margin-top:1em;">
-          <label>
-            <input type="checkbox" id="downloadPDF" />
-            download a PDF copy of this report
-          </label>
-        </div>
-        <button type="submit">unlock my report</button>
-      </form>
-    </div>
-  </div>
-  -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
   <script src="script.js"></script>
 </body>
 </html>
