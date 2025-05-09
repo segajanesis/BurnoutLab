@@ -11,6 +11,7 @@ textarea {
 }
 
 button {
+  align-self: flex-start; 
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -19,5 +20,5 @@ button {
 
 button:active {
   transform: scale(0.97);
-  background-color: #ddd; /* Optional: slight color change on press */
+  background-color: #ddd; 
 }
