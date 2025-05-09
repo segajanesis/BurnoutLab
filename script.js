@@ -26,7 +26,7 @@ async function generateLabReport() {
     reportContainer.innerHTML = `<pre>${data.report}</pre>`;
   } catch (err) {
     console.error('API Error:', err);
-    reportContainer.innerHTML = `<p style="color: red;">Failed to fetch lab report.</p>`;
+    reportContainer.innerHTML = `<p style="color: red;">Sorry, the lab is currently closed.</p>`;
   } finally {
     button.disabled = false;
     button.textContent = 'analyze my resume';
