@@ -1,22 +1,17 @@
-const button = document.querySelector('button');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  button.disabled = true;
-  button.textContent = 'analyzing...';
-
-  // do your fetch/analysis logic here
-
-  button.disabled = false;
-  button.textContent = 'analyze my resume';
-});
-
 async function generateLabReport() {
-  const resume = document.getElementById('resumeTextarea').value;
+  const button = document.querySelector('button');
+  const textarea = document.getElementById('resumeTextarea');
+  const reportContainer = document.getElementById('burnout-report');
+  const resume = textarea.value.trim();
+
   if (!resume || resume.length < 100) {
     alert('Sorry, resume is not long enough to create report.');
     return;
   }
+
+  // Disable the button and show loading state
+  button.disabled = true;
+  button.textContent = 'analyzing...';
 
   try {
     const response = await fetch('https://burnout-lab-api.onrender.com/lab-report', {
@@ -26,9 +21,14 @@ async function generateLabReport() {
     });
 
     const data = await response.json();
-    document.getElementById('burnout-report').innerHTML = data.html;
+
+    // Assume API returns the report as raw HTML (or update as needed)
+    reportContainer.innerHTML = `<pre>${data.report}</pre>`;
   } catch (err) {
     console.error('API Error:', err);
-    alert('Failed to fetch lab report.');
+    reportContainer.innerHTML = `<p style="color: red;">Failed to fetch lab report.</p>`;
+  } finally {
+    button.disabled = false;
+    button.textContent = 'analyze my resume';
   }
 }
