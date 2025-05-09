@@ -1,7 +1,7 @@
 async function generateLabReport() {
   const resume = document.getElementById('resumeTextarea').value;
   if (!resume || resume.length < 100) {
-    alert('Please paste a longer resume.');
+    alert('Sorry, resume is not long enough to create report.');
     return;
   }
 
