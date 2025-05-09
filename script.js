@@ -1,3 +1,16 @@
+const button = document.querySelector('button');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  button.disabled = true;
+  button.textContent = 'analyzing...';
+
+  // do your fetch/analysis logic here
+
+  button.disabled = false;
+  button.textContent = 'analyze my resume';
+});
+
 async function generateLabReport() {
   const resume = document.getElementById('resumeTextarea').value;
   if (!resume || resume.length < 100) {
