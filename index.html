@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>burnout lab</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>burnout lab</h1>
   <p>tools that make job searching suck less</p>
+
   <h2>start here: resume lab</h2>
   <p>paste your resume and get a diagnostic report</p>
 
-  <textarea id="resumeTextarea" placeholder="paste your resume here"></textarea>
-  <button onclick="generateLabReport()">analyze my resume</button>
-
+  <div class="resume-section">
+    <textarea id="resumeTextarea" placeholder="paste your resume here"></textarea>
+    <button onclick="generateLabReport()">analyze my resume</button>
+  </div>
 
   <div id="burnout-report">
     <p>burnout lab results appear here</p>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
