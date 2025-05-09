@@ -9,3 +9,15 @@ textarea {
   height: 200px;
   margin-bottom: 1em;
 }
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.05s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+  background-color: #ddd; /* Optional: slight color change on press */
+}
