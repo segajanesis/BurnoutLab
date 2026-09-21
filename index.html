@@ -2,26 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>burnout lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Burnout Lab — Closed</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>burnout lab</h1>
-  <p>tools that make job searching suck less</p>
+  <main>
+    <h1>burnout lab</h1>
+    <p class="status" role="status">Sorry, the lab is currently closed.</p>
+    <p>This page is retained as a code-only demonstration. It does not accept or transmit resume data.</p>
 
-  <h2>start here: resume lab</h2>
-  <p>paste your resume and get a diagnostic report</p>
-
-  <div class="resume-section">
-    <textarea id="resumeTextarea" placeholder="paste your resume here"></textarea>
-    <button onclick="generateLabReport()">analyze my resume</button>
-  </div>
-
-  <div id="burnout-report">
-    <p>burnout lab results appear here</p>
-  </div>
-
-  <script src="script.js"></script>
+    <section aria-labelledby="demo-heading">
+      <h2 id="demo-heading">demo code</h2>
+      <p>The former application sent resume text to a server for analysis. That functionality has been removed; see <code>script.js</code> for a local, non-networked example.</p>
+    </section>
+  </main>
 </body>
 </html>
