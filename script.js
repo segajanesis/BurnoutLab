@@ -1,34 +1,30 @@
-async function generateLabReport() {
-  const button = document.querySelector('button');
-  const textarea = document.getElementById('resumeTextarea');
-  const reportContainer = document.getElementById('burnout-report');
-  const resume = textarea.value.trim();
+/*
+ * Demo only: this file intentionally performs no network requests and uses
+ * no API keys or third-party services. The production resume-analysis flow
+ * has been retired.
+ */
 
-  if (!resume || resume.length < 100) {
-    alert('Sorry, resume is not long enough to create report.');
-    return;
+function createDemoReport(resumeText) {
+  const resume = String(resumeText || '').trim();
+
+  if (!resume) {
+    return 'No resume supplied. This is a local demonstration only.';
   }
 
-  // Disable the button and show loading state
-  button.disabled = true;
-  button.textContent = 'analyzing...';
-
-  try {
-    const response = await fetch('https://burnout-lab-api.onrender.com/lab-report', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ resume })
-    });
-
-    const data = await response.json();
-
-    // Assume API returns the report as raw HTML (or update as needed)
-    reportContainer.innerHTML = `<pre>${data.report}</pre>`;
-  } catch (err) {
-    console.error('API Error:', err);
-    reportContainer.innerHTML = `<p style="color: red;">Sorry, the lab is currently closed.</p>`;
-  } finally {
-    button.disabled = false;
-    button.textContent = 'analyze my resume';
-  }
+  return [
+    'Demo report (not an actual analysis)',
+    '',
+    `Characters received locally: ${resume.length}`,
+    'In a real application, validated and consented input could be processed by a protected backend.',
+    'No resume content was sent anywhere by this demo.'
+  ].join('\n');
 }
+
+// Safe rendering example: textContent prevents report content from becoming HTML.
+function renderDemoReport(container, resumeText) {
+  if (!(container instanceof HTMLElement)) return;
+  container.textContent = createDemoReport(resumeText);
+}
+
+// Example usage (intentionally not executed by the closed page):
+// renderDemoReport(document.querySelector('#burnout-report'), 'sample resume text');
